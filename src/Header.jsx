@@ -10,25 +10,48 @@ import Grid from "@mui/material/Grid";
 
 
 export default function Header() {
+
+  function menuClickEvent () {
+    console.log("click event handler activated");
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
+          
           <IconButton
+            onClick={menuClickEvent}
             size="large"
             edge="start"
             color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
+            aria-label="menu">
+
             <MenuIcon />
           </IconButton>
-          <Typography variant="h3" component="div" sx={{ flexGrow: 1 }}>
-            JOSHUA GULLEDGE
-          </Typography>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            SOFTWARE ENGINEER
-          </Typography>
+          
+          <Grid container sx={{ml: 4}} spacing={0}>
+            
+            <Grid item xs={8} md={8} lg={8}>
+              <Typography 
+                variant="h3" 
+                component="div"
+                sx={{ flexGrow: 1 }}>
+                JOSHUA GULLEDGE
+              </Typography>
+            </Grid>
+            
+            <Grid item xs={8} md={8} lg={8}>
+              <Typography 
+                variant="h6" 
+                component="div" 
+                sx={{ flexGrow: 1 }}>
+                SOFTWARE ENGINEER
+              </Typography>
+            </Grid>
+          
+          </Grid>
+
         </Toolbar>
       </AppBar>
     </Box>
