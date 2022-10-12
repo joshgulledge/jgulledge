@@ -3,10 +3,11 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Grid from "@mui/material/Grid";
+
 
 
 export default function Header() {
@@ -15,8 +16,10 @@ export default function Header() {
     console.log("click event handler activated");
   };
 
+  
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
+      <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
           
@@ -35,8 +38,9 @@ export default function Header() {
             <Grid item xs={8} md={8} lg={8}>
               <Typography 
                 variant="h3" 
+                
                 component="div"
-                sx={{ flexGrow: 1 }}>
+                sx={{ flexShrink: 1, flexgrow: 1}}>
                 JOSHUA GULLEDGE
               </Typography>
             </Grid>
