@@ -21,8 +21,6 @@ export default function Header() {
 
 
   function menuClickEvent (event) {
-    console.log("click event handler activated");
-    console.log(event.currentTarget);
     setMenuAnchor(event.currentTarget);
   };
 
@@ -62,7 +60,6 @@ export default function Header() {
             <Grid item xs={8} md={8} lg={8}>
               <Typography 
                 variant="h3" 
-                
                 component="div"
                 sx={{ flexShrink: 1, flexgrow: 1}}>
                 JOSHUA GULLEDGE

@@ -1,8 +1,11 @@
+// react things
 import React from "react";
-//import Button from "@mui/material/Button";
-import Header from "./Header";
-//import Grid from "@mui/material/Grid";
-// import TestButton from "./TestButton";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+// components
+import Home from "./Home";
+
+// material ui things
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 const theme = createTheme();
@@ -29,13 +32,17 @@ theme.typography.h6 = {
 
 function App() {
 	return (
-		<div>
-			<ThemeProvider theme={theme}>
-				<Header />
-			</ThemeProvider>
-
-			{/* <TestButton /> */}
-		</div>
+		<ThemeProvider theme={theme}>
+			<BrowserRouter>
+				<div>
+					<Routes>
+						<Route
+							path="/"
+							element={<Home />}></Route>
+					</Routes>
+				</div>
+			</BrowserRouter>
+		</ThemeProvider>
 	);
 }
 
